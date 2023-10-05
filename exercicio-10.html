@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 10</title>
+</head>
+<body>
+    <script>
+//variaveis com prompt para digitar a quantidade de alunos
+let quantidadeDeAlunos = parseInt(prompt("Digite a quantidade de alunos:"));
+let aprovados = 0;
+//for para criar os loops e ler as notas
+for (let i = 0; i < quantidadeDeAlunos; i++) {
+    let somaNotas = 0;
+
+    for (let j = 0; j < 4; j++) {
+        somaNotas += parseFloat(prompt(`Digite a nota ${j + 1} do aluno ${i + 1} (0 a 10):`));
+    }
+
+    let media = somaNotas / 4;
+
+    if (media >= 6) {
+        alert(`O Aluno ${i + 1} foi Aprovado com média ${media.toFixed(2)}`);
+        aprovados++;
+    } else {
+        alert(`O Aluno ${i + 1} foi Reprovado com média ${media.toFixed(2)}`);
+    }
+}
+//variavel para calcular a media de aprovados
+let porcentagemDeAprovados = (aprovados / quantidadeDeAlunos) * 100;
+//Exibir os aprovados e a porcentagem de aprovados
+alert(`Quantidade de alunos aprovados: ${aprovados}`);
+alert(`Porcentagem de alunos aprovados: ${porcentagemDeAprovados.toFixed(2)}%`);
+
+    </script>
+</body>
+</html>

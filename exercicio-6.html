@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 6</title>
+</head>
+<body>
+    <script>
+ //Variaveis e prompt para digitar a quantidade de pessoas        
+let QuantidadeDePessoas = parseInt(prompt("Digite a quantidade de pessoas que não estão sendo monitoradas:"));
+let MaiorAltura = 0;
+let MenorAltura = Infinity;
+let SomaDosPesos = 0;
+//Prompt para pedir o peso 
+for (let i = 0; i < QuantidadeDePessoas; i++) {
+    let peso = parseFloat(prompt("Digite o peso da pessoa (ou 0 para encerrar):"));
+
+    //sai do loop se o peso for = a 0
+    if (peso === 0) {
+        break;
+    }
+//Prompt para pedir a altura
+    let altura = parseFloat(prompt("Digite a altura da pessoa em metros:"));
+
+    MaiorAltura = Math.max(MaiorAltura, altura);
+    MenorAltura = Math.min(MenorAltura, altura);
+    SomaDosPesos += peso;
+}
+//variavel para saber as medias 
+let MediaDosPesos = SomaDosPesos / QuantidadeDePessoas;
+//notifica os resultados
+alert("Maior altura informada: " + MaiorAltura.toFixed(2) + " metros");
+alert("Menor altura informada: " + MenorAltura.toFixed(2) + " metros");
+alert("Média dos pesos informados: " + MediaDosPesos.toFixed(2) + " kg");
+    </script>
+</body>
+</html>

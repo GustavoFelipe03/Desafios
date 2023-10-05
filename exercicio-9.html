@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 9</title>
+</head>
+<body>
+    <script>
+//variaveis
+let alturas = [];
+let somaAlturasDasMulheres = 0;
+let quantidadeDeMulheres = 0;
+let menorAlturaDosHomens = Infinity;
+let quantidadeDeHomens = 0;
+//while para criar o laço ate a pessoa encerrar com 0
+while (true) {
+    let altura = parseFloat(prompt("Digite a altura da pessoa (ou 0 para encerrar):"));
+    if (altura === 0) {
+        break;
+    }
+    let sexo = prompt("Digite o sexo da pessoa (M ou F):").toUpperCase();
+
+    if (sexo === 'M') {
+        quantidadeDeHomens++;
+        menorAlturaDosHomens = Math.min(menorAlturaDosHomens, altura);
+    } else if (sexo === 'F') {
+        quantidadeDeMulheres++;
+        somaAlturasDasMulheres += altura;
+    }
+
+    alturas.push(altura);
+}
+//Calcular a maior altura, a media das alturas 
+let maiorAltura = Math.max(...alturas);
+let mediaAlturasDasMulheres = somaAlturasDasMulheres / quantidadeDeMulheres;
+//notificar os resultados na tela
+alert("Maior altura informada: " + maiorAltura.toFixed(2) + " metros");
+alert("Média das alturas das mulheres: " + mediaAlturasDasMulheres.toFixed(2) + " metros");
+alert("Quantidade de homens: " + quantidadeDeHomens);
+alert("Menor altura dos homens: " + (quantidadeDeHomens > 0 ? menorAlturaDosHomens.toFixed(2) + " metros" : "N/A"));
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 4</title>
+</head>
+<body>
+    <script>
+        
+function calcularMedia(nota1, nota2) {
+return (nota1 + nota2) / 2;
+}
+//função para validar a nota que deve ser de 0 a 10
+function validarNota(nota) {
+return nota >= 0 && nota <= 10;
+}
+//função para ler as notas recebidas e calcular 
+function calcularMediasDosAlunos() {
+    let nota1 = parseFloat(prompt('Digite a primeira nota do aluno (0 a 10):'));
+    
+    if (!validarNota(nota1)) {
+        alert('Nota inválida. Digite uma nota entre 0 e 10.');
+        return calcularMediasDosAlunos();
+    }
+
+    let nota2 = parseFloat(prompt('Digite a segunda nota do aluno (0 a 10):'));
+
+    if (!validarNota(nota2)) {
+        alert('Nota inválida. Digite uma nota entre 0 e 10.');
+        return calcularMediasDosAlunos();
+    }
+
+    const media = calcularMedia(nota1, nota2);
+    alert(`Média do aluno: ${media.toFixed(2)}`);
+
+    let resposta = prompt('Deseja continuar calcular a media de outro aluno? (SIM ou NAO):');
+    if (resposta.toUpperCase() === 'SIM') {
+        calcularMediasDosAlunos();
+    } else {
+        alert('ENCERRADO!');
+    }
+}
+
+calcularMediasDosAlunos();
+
+    </script>
+</body>
+</html>

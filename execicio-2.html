@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+</head>
+<script>
+    // Variaveis do número de carros vendidos, valor total das vendas, salário fixo e valor por carro vendido
+let numeroDeCarrosVendidos = parseInt(prompt("Digite o número de carros vendidos: "));
+let valorTotalDasVendas = parseFloat(prompt("Digite o valor total das vendas: "));
+let salarioFixoDoVendedor = parseFloat(prompt("Digite o salário fixo do vendedor: "));
+let valorPorCarroVendido = parseFloat(prompt("Digite o valor recebido por carro vendido: "));
+
+// variavel para calcular o valor da comissão (5% do valor total das vendas)
+let comissao = 0.05 * valorTotalDasVendas;
+
+// variavel para calcular o salário final do vendedor (salário fixo + comissão + valor por carro vendido * número de carros vendidos)
+let salarioFinal = salarioFixoDoVendedor + comissao + (valorPorCarroVendido * numeroDeCarrosVendidos);
+
+// Imprimir na tela salário final do vendedor
+alert("O salário final do vendedor é: R$ " + salarioFinal.toFixed(2));
+
+</script>
+<body>
+    
+</body>
+</html>

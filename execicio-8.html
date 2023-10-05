@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 8</title>
+</head>
+<body>
+    <script>
+        let nomes = []; //variavel vetor
+
+// para ler os nomes de ate 10 pessoas
+for (let i = 0; i < 10; i++) {
+    nomes.push(prompt("Digite o nome da pessoa:"));
+}
+
+// Leitura de 1 nome
+let nomeBusca = prompt("Digite um nome para buscar:");
+
+// Para verificar se o nome está no vetor e exibe a mensagem correta
+alert(nomes.includes(nomeBusca) ? "ACHEI" : "NÃO ACHEI");
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 3</title>
+</head>
+<body>
+    <script>
+// Variaveis para solicitar ao usuário as informações sobre o estoque do produto
+let quantidadeAtualNoEstoque = parseFloat(prompt("Digite a quantidade atual em estoque:"));
+let quantidadeMaximaNoEstoque = parseFloat(prompt("Digite a quantidade máxima em estoque:"));
+let quantidadeMinimaNoEstoque = parseFloat(prompt("Digite a quantidade mínima em estoque:"));
+
+// Variavel para calcula a quantidade média
+let quantidadeMedia = (quantidadeMaximaNoEstoque + quantidadeMinimaNoEstoque) / 2;
+
+// Verifica se deve ser feita uma compra ou não
+if (quantidadeAtualNoEstoque >= quantidadeMedia) {
+    alert("Não efetuar compra");
+} else {
+    alert("Efetuar compra");
+}
+
+    </script>
+</body>
+</html>

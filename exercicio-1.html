@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 1</title>
+</head>
+<script>
+//Variavel do custo de fabrica do carro, prompt para digitar o custo
+let custoDeFabricaDoCarro = parseFloat(prompt("Digite o custo de fábrica do carro: "));
+
+
+let percentualDistribuidor = 0.28; // 28%
+let impostos = 0.45; // 45%
+
+//Variavel para calcular 
+let custoComImpostos = custoDeFabricaDoCarro + (custoDeFabricaDoCarro * percentualDistribuidor) + (custoDeFabricaDoCarro * impostos);
+
+//Imprimir o custo final ao consumidor 
+alert("O custo final ao consumidor é: R$ " + custoComImpostos.toFixed(2));
+ 
+
+</script>
+<body>
+    
+</body>
+</html>
